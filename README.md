@@ -2,16 +2,16 @@ Ekurtosis
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) distribution [ekurtosis](https://en.wikipedia.org/wiki/ekurtosis).
+> [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) distribution [excess kurtosis](https://en.wikipedia.org/wiki/Kurtosis).
 
-The [ekurtosis](https://en.wikipedia.org/wiki/ekurtosis) for a [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) random variable is
+The [excess kurtosis](https://en.wikipedia.org/wiki/Kurtosis) for a [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) random variable is
 
-<div class="equation" align="center" data-raw-text="\operatorname{}\left[ X \right] = " data-equation="eq:ekurtosis">
-	<img src="" alt="ekurtosis for a Poisson distribution.">
+<div class="equation" align="center" data-raw-text="\gamma_2 = \frac{1}{\lambda}" data-equation="eq:ekurtosis">
+	<img src="https://cdn.rawgit.com/distributions-io/poisson-ekurtosis/d3ffc8f66ebdc61537b3bfd97e157a2e498a39cd/docs/img/eqn.svg" alt="Excess kurtosis for a Poisson distribution.">
 	<br>
 </div>
 
-where `0 &lt;=lambda&lt;= 1` is the mean parameter.
+where `lambda > 0` is the mean parameter.
 
 
 ## Installation
@@ -31,7 +31,7 @@ var ekurtosis = require( 'distributions-poisson-ekurtosis' );
 
 #### ekurtosis( lambda[, opts] )
 
-Computes the [ekurtosis](https://en.wikipedia.org/wiki/ekurtosis) for a [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) distribution with parameter `lambda`. `lambda` may be either a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix).
+Computes the [excess kurtosis](https://en.wikipedia.org/wiki/Kurtosis) for a [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) distribution with parameter `lambda`. `lambda` may be either a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix).
 
 ``` javascript
 var matrix = require( 'dstructs-matrix' ),
@@ -48,7 +48,7 @@ out = ekurtosis( lambda );
 
 // returns [ ~0.500, ~0.200, ~0.100, ~0.050 ]
 
-lambda = new Float32ArrayArray( lambda );
+lambda = new Float32Array( lambda );
 out = ekurtosis( lambda );
 // returns Float64Array( [~0.500,~0.200,~0.100,~0.050] )
 
@@ -176,7 +176,7 @@ bool = ( mat === out );
 
 ## Notes
 
-*	If an element is __not__ a positive number, the [ekurtosis](https://en.wikipedia.org/wiki/ekurtosis) is `NaN`.
+*	If an element is __not__ a positive number, [excess kurtosis](https://en.wikipedia.org/wiki/Kurtosis) is `NaN`.
 
 	``` javascript
 	var lambda, out;

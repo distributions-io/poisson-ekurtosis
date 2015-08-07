@@ -1,4 +1,4 @@
-Ekurtosis
+Excess Kurtosis
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -54,13 +54,13 @@ out = ekurtosis( lambda );
 
 lambda =  matrix( [ 2, 5, 10, 20 ], [2,2] );
 /*
-	[ 2 5,
+	[ 2  5
 	  10 20 ]
 */
 
 out = ekurtosis( lambda );
 /*
-	[ ~0.500 ~0.200,
+	[ ~0.500 ~0.200
 	  ~0.100 ~0.050 ]
 */
 ```
@@ -157,7 +157,7 @@ bool = ( data === out );
 
 mat = matrix( [ 2, 5, 10, 20 ], [2,2] );
 /*
-	[ 2 5,
+	[ 2  5
 	  10 20 ]
 */
 
@@ -165,7 +165,7 @@ out = ekurtosis( mat, {
 	'copy': false
 });
 /*
-	[ ~0.500 ~0.200,
+	[ ~0.500 ~0.200
 	  ~0.100 ~0.050 ]
 */
 

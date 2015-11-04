@@ -103,7 +103,10 @@ var lambda = [
 	{'x':[9,20]}
 ];
 
-var out = ekurtosis( lambda, 'x|1', '|' );
+var out = ekurtosis( lambda, {
+	'path': 'x|1',
+	'sep': '|'
+});
 /*
 	[
 		{'x':[9,~0.500]},

@@ -20,11 +20,13 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/compute-io/poisson-ekurtosis.git"
+    "url": "git://github.com/distributions-io/poisson-ekurtosis.git"
   },
   "keywords": [
     "distributions.io",
     "distributions",
+    "discrete",
+    "counts",
     "probability",
     "statistics",
     "stats",
@@ -35,7 +37,7 @@
     "peakedness"
   ],
   "bugs": {
-    "url": "https://github.com/compute-io/poisson-ekurtosis/issues"
+    "url": "https://github.com/distributions-io/poisson-ekurtosis/issues"
   },
   "dependencies": {
     "compute-array-constructors": "^1.0.0",
